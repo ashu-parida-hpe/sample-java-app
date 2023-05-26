@@ -7,10 +7,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void appHasAGreeting() {
+    @Test 
+    public void appHasAnswers() {
         App classUnderTest = new App();
-        //assertNull(classUnderTest.getGreeting());
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-        //System.out.println("Test-successful");
+        assertEquals(5,classUnderTest.add(2, 3));
+        assertEquals(5,classUnderTest.subtract(10, 5));
+        assertEquals(50,classUnderTest.multiply(5, 10));
+        assertEquals(5,classUnderTest.divide(10, 2));
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        new App().divide(6, 0);
     }
 }

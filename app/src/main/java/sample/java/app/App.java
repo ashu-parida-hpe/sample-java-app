@@ -4,11 +4,30 @@
 package sample.java.app;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return a / b;
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+        System.out.println(app.add(5, 3));
+        System.out.println(app.subtract(5, 3));
+        System.out.println(app.multiply(5, 3));
+        System.out.println(app.divide(6, 3));
     }
 }

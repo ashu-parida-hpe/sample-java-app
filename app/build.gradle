@@ -35,3 +35,4 @@ application {
     // Define the main class for the application.
     mainClass = 'sample.java.app.App'
 }
+
