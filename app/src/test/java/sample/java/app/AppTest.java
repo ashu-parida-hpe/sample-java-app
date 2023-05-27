@@ -7,14 +7,33 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test 
-    public void appHasAnswers() {
-        App classUnderTest = new App();
+
+    App classUnderTest;
+
+    public AppTest() {
+        classUnderTest = new App();
+    }
+
+    @Test  
+    public void checkAddition() {
         assertEquals(5,classUnderTest.add(2, 3));
+    }
+    
+    @Test 
+    public void checkSubtraction() {
         assertEquals(5,classUnderTest.subtract(10, 5));
+    }
+
+    @Test 
+    public void checkMultiply() {
         assertEquals(50,classUnderTest.multiply(5, 10));
+    }
+
+    @Test 
+    public void checkDivision() {
         assertEquals(5,classUnderTest.divide(10, 2));
     }
+
     @Test(expected = IllegalArgumentException.class)
     public void testDivideByZero() {
         new App().divide(6, 0);
