@@ -36,3 +36,8 @@ jobs:
       run: gradle build
     - name: Run tests
       run: gradle test
+    - name: Publish test reports
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test Reports
+        path: build/reports/tests  
