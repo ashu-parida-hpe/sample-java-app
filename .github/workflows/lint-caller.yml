@@ -1,0 +1,11 @@
+name: Call Lint Reusable Workflows
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]    
+
+jobs:
+  build-and-test:
+    uses: ashu-parida-hpe/github_action_demo/.github/workflows/super-linter.yml@main
