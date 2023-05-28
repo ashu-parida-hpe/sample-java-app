@@ -21,7 +21,7 @@ public class AppTest {
     
     @Test 
     public void checkSubtraction() {
-        assertEquals(3,classUnderTest.subtract(10, 5));
+        assertEquals(5,classUnderTest.subtract(10, 5));
     }
 
     @Test 
