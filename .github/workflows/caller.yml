@@ -1,0 +1,17 @@
+name: Call Reusable Workflows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Call Gradle Build & Test Workflow
+        uses: ashu-parida-hpe/github_action_demo/.github/workflows/gradle.yml@main
