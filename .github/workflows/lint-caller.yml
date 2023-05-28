@@ -7,5 +7,5 @@ on:
     branches: [ "main" ]    
 
 jobs:
-  build-and-test:
+  lint-test:
     uses: ashu-parida-hpe/github_action_demo/.github/workflows/super-linter.yml@main
