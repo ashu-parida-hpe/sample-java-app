@@ -27,3 +27,9 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Super-Linter reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Super-Linter Reports
+          path: reports/lint    
