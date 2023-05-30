@@ -16,7 +16,7 @@ public class AppTest {
 
     @Test  
     public void checkAddition() {
-        assertEquals(6,classUnderTest.add(2, 3));
+        assertEquals(5,classUnderTest.add(2, 3));
     }
     
     @Test 
