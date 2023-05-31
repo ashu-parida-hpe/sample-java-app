@@ -36,3 +36,5 @@ application {
     mainClass = 'sample.java.app.App'
 }
 
+apply plugin: 'war'
+
